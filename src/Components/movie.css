@@ -1,0 +1,38 @@
+.movie-cart{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 10px 45px 10px;
+    box-shadow: 0px 4px 10px -5px #333;
+}
+.content-movie-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+.movie-cart__title{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.content-movie-cart__img{
+    width:100%;
+    min-height: 250px;
+    height: 100%;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.content-movie-cart img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content-movie-cart__year{
+    font-size: 16px;
+    display: block;
+}
+.content-movie-cart__type{
+    display: block;
+}

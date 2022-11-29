@@ -1,0 +1,10 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgb(51, 160, 165);
+}
+.footer__heading,
+.footer__text{
+    color: #fff;
+}

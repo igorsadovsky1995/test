@@ -1,0 +1,30 @@
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background: rgb(51, 160, 165);
+}
+.header__nav {
+    display: flex;
+    align-items: center;
+}
+.header__logo a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 4px;
+    font-size: 32px;
+    color: #fff;
+}
+.nav-header__list{
+    
+    display: flex;
+    gap: 0 20px;
+}
+.nav-header__link{
+    list-style: none;
+}
+.nav-header__link a{
+    color: #fff;
+}
