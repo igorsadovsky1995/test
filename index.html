@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        body{
+            background: #000;
+            color: #fff;
+            font-size: calc(16 * 100vw / 320);
+            margin: 0;
+            padding: 0;
+        }
+        .wrapper{
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 4px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .tap{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border:2px solid #fff;
+            width: 70vw;
+            height: 70vw;
+            border-radius: 50%;      
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;  
+            font-size: 2.5rem;
+           
+        }
+        
+        .tap span{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,1rem);
+            animation: tap 1s linear infinite;
+            
+        }
+        @keyframes tap {
+            0%{
+                opacity: 0;
+                visibility: hidden;
+                transform: translate(-50%,-50%);
+            }
+            50%{
+                opacity: 1;
+                visibility: visible;
+                transform: translate(-50%,-150%);
+            }
+            100%{
+                opacity: 0;
+                visibility: hidden;
+                transform: translate(-50%,-250%);
+            }
+        }
+        @media (min-width:768px) {
+            h1{
+                font-size: 2rem;
+            }
+            .tap{
+                width: 20vw;
+                height: 20vw;
+                cursor: pointer;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>
+            Coins: <span class="count">0</span>
+        </h1>
+        <div class="tap">
+                Tap here
+                
+        </div>
+
+    </div>
+    <script>    
+        let count = 0 ;
+        document.querySelector('.tap').addEventListener('click',function(){
+            count++;
+            document.querySelector('.count').textContent=count;
+            const el = document.createElement("span");
+            el.textContent='+1' 
+            document.querySelector('.tap').append(el);
+
+            setTimeout(function(){
+                document.querySelector('.tap span').remove();
+            },1000)
+
+        })
+    </script>   
+</body>
+</html>
